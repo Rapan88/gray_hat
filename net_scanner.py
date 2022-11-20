@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+
 import scapy.all as scapy
 
 
@@ -26,6 +27,6 @@ def print_scan(results_list):
         print(element["ip"] + "\t\t" + element["mac-address"])
 
 
-options = get_arguments()
-print_scan(scan(options.target))
-
+if __name__ == "__main__":
+    options = get_arguments()
+    print_scan(scan(options.target))
